@@ -1,0 +1,368 @@
+/* =========================
+   CV - règles demandées
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff;
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.cv {
+    width: 1160px;
+    max-width: 100%;
+    margin: 10px auto 0;
+}
+
+/* =========================
+   EN-TÊTE
+   ========================= */
+
+.header {
+    min-height: 235px;
+    background: #20aab0;
+    display: flex;                 /* Flexbox */
+    align-items: center;
+    padding: 35px 95px;
+    color: #ffffff;
+}
+
+.photo-zone {
+    width: 190px;
+    flex: 0 0 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 145px;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    display: block;
+    cursor: zoom-in;               /* Effet n°2 */
+}
+
+.identity {
+    flex: 1;
+    text-align: center;
+}
+
+.identity h1 {
+    margin: 0;
+    font-size: 43px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.identity h2 {
+    margin: 6px 0 22px;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.contact {
+    width: 430px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;                 /* Flexbox */
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 42px;
+    row-gap: 13px;
+}
+
+.contact a,
+.contact-item {
+    min-width: 150px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   COLONNES
+   ========================= */
+
+.main {
+    display: flex;                 /* Flexbox */
+    align-items: stretch;
+}
+
+.sidebar {
+    width: 315px;
+    flex: 0 0 315px;
+    background: #edf0f1;
+    padding: 45px 35px 50px;
+}
+
+.content {
+    flex: 1;
+    padding: 45px 45px 55px;
+    min-width: 0;
+}
+
+.sidebar section,
+.content-section {
+    margin: 0 0 28px;
+}
+
+h3 {
+    color: #20aab0;
+    font-size: 21px;
+    font-weight: 400;
+    margin: 0 0 13px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #dfe3e4;
+}
+
+.sidebar h3 {
+    border-bottom: 1px solid #dfe3e4;
+}
+
+/* =========================
+   SIDEBAR
+   ========================= */
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills li,
+.plain-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.skills li {
+    font-weight: 600;
+}
+
+.stars {
+    color: #20aab0;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+.plain-list li {
+    font-size: 14px;
+}
+
+.plain-list li span:last-child {
+    text-align: right;
+    margin-left: 10px;
+}
+
+.square-list li {
+    position: relative;
+    padding-left: 15px;
+    margin: 7px 0;
+}
+
+.square-list li::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: #20aab0;
+    position: absolute;
+    left: 0;
+    top: 7px;
+}
+
+/* =========================
+   CONTENU
+   ========================= */
+
+.profile-text {
+    margin: 0 0 7px;
+    line-height: 1.25;
+    text-align: justify;            /* demandé */
+    text-indent: 35px;              /* indentation première ligne */
+}
+
+/* =========================
+   FORMATIONS / STAGES /
+   EXPÉRIENCES
+   ========================= */
+
+.timeline-item {
+    display: flex;                  /* Flexbox */
+    justify-content: space-between;
+    align-items: flex-start;
+
+    /* Le padding et la bordure sont inclus dans la largeur/hauteur */
+    box-sizing: border-box;
+
+    min-height: 70px;
+    padding: 14px 10px 12px 14px;
+    margin: 0;
+
+    border-left: 5px solid transparent;
+
+    transition:
+        background-color 0.2s ease,
+        border-left-color 0.2s ease;
+}
+
+/* Effet n°1 */
+.timeline-item:hover {
+    background: #e4e4e4;
+    border-left-color: #20aab0;
+}
+
+.timeline-item > div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+}
+
+.timeline-item strong {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.timeline-item em {
+    font-size: 12px;
+    color: #333333;
+}
+
+.timeline-item time {
+    color: #20aab0;
+    font-size: 13px;
+    white-space: nowrap;
+    margin-left: 20px;
+    text-align: right;
+}
+
+/* =========================
+   PIED DE PAGE
+   ========================= */
+
+.footer {
+    min-height: 80px;
+    background: #20aab0;
+    color: #ffffff;
+
+    display: flex;                  /* Flexbox */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+.socials {
+    display: flex;
+    gap: 22px;
+}
+
+.socials a {
+    color: #ffffff;
+    font-size: 22px;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+/* Effet n°3 */
+.socials a:hover {
+    opacity: 0.55;
+}
+
+.footer small {
+    font-size: 9px;
+}
+
+/* =========================
+   ADAPTATION ÉCRAN
+   ========================= */
+
+@media (max-width: 900px) {
+    .header {
+        padding: 25px;
+    }
+
+    .photo-zone {
+        width: 155px;
+        flex-basis: 155px;
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .identity h1 {
+        font-size: 34px;
+    }
+
+    .sidebar {
+        width: 280px;
+        flex-basis: 280px;
+    }
+
+    .content {
+        padding: 35px 25px;
+    }
+}
+
+@media (max-width: 700px) {
+    .header,
+    .main {
+        flex-direction: column;
+    }
+
+    .header {
+        text-align: center;
+    }
+
+    .photo-zone,
+    .sidebar {
+        width: 100%;
+        flex-basis: auto;
+    }
+
+    .sidebar {
+        padding: 30px;
+    }
+
+    .content {
+        padding: 30px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .timeline-item time {
+        margin-left: 0;
+        text-align: left;
+    }
+}
+
+/* Icônes locales des réseaux sociaux */
+.socials a { width: 22px; height: 22px; display: inline-flex; transition: opacity .2s ease; }
+.socials img { width: 100%; height: 100%; display: block; }
