@@ -346,10 +346,12 @@ ul {
 
     .sidebar {
         padding: 30px;
+        order: 2;
     }
 
     .content {
         padding: 30px;
+        order: 1;
     }
 
     .timeline-item {
